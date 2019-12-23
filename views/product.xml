@@ -1,0 +1,22 @@
+<odoo>
+  <data>
+    <record id="crm_case_view_oppor" model="ir.ui.view">
+            <field name="name">crm.lead.form.opportunity</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm.crm_case_form_view_oppor"/>
+            <field name="arch" type="xml">
+              <xpath expr="//page" position="before">
+              <page string="Products">
+                <field name="order_date">
+                      <tree editable="bottom">
+                        <field name="product_id"/>
+                        <field name="product_qty"/>
+                        <field name="date_planned"  widget="date"/>
+                      </tree>
+                  </field>
+                  </page>
+              </xpath>
+            </field>
+      </record>
+  </data>
+</odoo>
